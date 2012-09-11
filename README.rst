@@ -5,7 +5,7 @@ mainman.buildout
 Buildout setting up Mailman 3 and postorius using Postfix as MTA.
 
 **Note:** This buildout uses trunk checkouts of ``mailman``, ``mailman.client``
-and ``postorius`` unless this packages are stable and released.
+and ``postorius`` untill these packages are stable and released.
 
 
 Install
@@ -45,7 +45,7 @@ and run::
 
     python setup.py build_sphinx
 
-Generated docs are not located at::
+Generated docs are located at::
 
     $mailman_install_dir/devsrc/mailman/build/sphinx/html
 
@@ -72,11 +72,11 @@ Configure Postfix
 
 Edit ``/etc/postfix/main.cf``.
 
-Add full qualified domain name of list(s) to ``mydestination``::
+Add fully qualified domain name of list(s) to ``mydestination``::
 
      mydestination = lists.mydomain.com mydomain.com
 
-Add this configuration properties::
+Add these configuration properties::
 
     recipient_delimiter = +
     unknown_local_recipient_reject_code = 550
@@ -114,7 +114,7 @@ Postorius binds to 127.0.0.1:8000 by default
 Create Domain
 =============
 
-Open browser and navigate to portorius (127.0.0.1:8000).
+Open a browser and navigate to postorius (127.0.0.1:8000).
 
 Navigate to settings and klick "new domain".
 
@@ -153,7 +153,7 @@ Save changes::
 Create Mailinglist
 ==================
 
-Start creating mailinglist in postorius. Navigate to "lists" and click
+Start creating a mailinglist in postorius. Navigate to "lists" and click
 "new list".
 
 Enter list name, e.g. ``test``.
